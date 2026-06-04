@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Should I Reply? | The Social Panic Calculator</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <div class="app-container">
+        <!-- Progress Bar Indicator -->
+        <div class="progress-bar">
+            <div class="progress-fill" id="progressFill"></div>
+        </div>
+        <div id="data-warning" class="data-warning hidden"></div>
+
+        <!-- STEP 1: Who Texted? -->
+        <div class="form-step active" id="step-1">
+            <h2>🚨 Who sent the message?</h2>
+            <p class="subtitle">Select the sender to calibrate our anxiety algorithm.</p>
+            <div class="choice-grid">
+                <button class="choice-card" data-type="sender" data-value="crush">❤️ My Crush</button>
+                <button class="choice-card" data-type="sender" data-value="lover">💘 My Lover</button>
+                <button class="choice-card" data-type="sender" data-value="bestie">💖 Bestie</button>
+                <button class="choice-card" data-type="sender" data-value="friend">🥑 A Good Friend</button>
+                <button class="choice-card" data-type="sender" data-value="boss">👔 My Boss</button>
+                <button class="choice-card" data-type="sender" data-value="family">🏡 Family Member</button>
+                <button class="choice-card" data-type="sender" data-value="ex">💔 My Ex</button>
+                <button class="choice-card" data-type="sender" data-value="potential-date">🌙 Potential Date</button>
+            </div>
+        </div>
+
+        <!-- STEP 2: The Tone -->
+        <div class="form-step" id="step-2">
+            <h2>🎭 What is the tone of the message?</h2>
+            <p class="subtitle">How does the message actually feel to read?</p>
+            <div class="choice-grid">
+                <button class="choice-card" data-type="tone" data-value="passive-aggressive" data-example="Short, clipped, annoyed text like 'K.' or 'Fine.'">"K." (Passive Aggressive)</button>
+                <button class="choice-card" data-type="tone" data-value="essay" data-example="Long, detailed messages that over-explain or vent all at once.">An actual essay / wall of text</button>
+                <button class="choice-card" data-type="tone" data-value="vague" data-example="Unclear, cryptic text like 'We need to talk...' or 'If you know, you know.'">Vague / Cryptic</button>
+                <button class="choice-card" data-type="tone" data-value="normal" data-example="A typical friendly message like 'Hey, what's up?'">Totally normal (but I'm overthinking)</button>
+                <button class="choice-card" data-type="tone" data-value="mixed-signals" data-example="Messages that feel confusing or inconsistent, like 'Maybe later?' and then 'Call me.'">Mixed signals / unclear vibe</button>
+                <button class="choice-card" data-type="tone" data-value="ghosting" data-example="Very short replies or silence, like 'k' or a single emoji.">One-word / ghosting reply</button>
+                <button class="choice-card" data-type="tone" data-value="custom" data-example="Describe the tone yourself if none of the options fit.">Other / describe it myself</button>
+            </div>
+            <p id="tone-example" class="tone-example">Pick the message tone to see a real example here.</p>
+            <div id="custom-tone-container" class="custom-tone-container hidden">
+                <label for="custom-tone-input">Describe the tone in your own words:</label>
+                <input id="custom-tone-input" type="text" placeholder="e.g. nervous, jealous, unsure, excited, short and cold">
+                <p id="custom-tone-helper" class="custom-tone-note hidden">Type your own tone and press Enter, or click Continue after entering it.</p>
+            </div>
+            <div class="message-input-group">
+                <label for="received-message">Paste the message you received</label>
+                <textarea id="received-message" rows="4" placeholder="Optional: add the actual message text to make the prompt more accurate."></textarea>
+                <p class="message-note">Adding the real message helps the AI understand context and tone better.</p>
+            </div>
+            <button class="btn-back btn-secondary" id="backToSender">⬅️ Back</button>
+            <button class="btn-next" id="nextToSubject">Continue ➡️</button>
+        </div>
+
+        <!-- STEP 3: Message Subject -->
+        <div class="form-step" id="step-3">
+            <h2>🧭 What is the message about?</h2>
+            <p id="subject-step-note" class="subtitle">Let's look past the subtext. What are they actually trying to achieve here?</p>
+            <div class="choice-grid" id="subject-choice-grid">
+                <button class="choice-card" data-type="subject" data-value="drama">🎭 Drama / Emergency</button>
+                <!-- Subject buttons are rendered dynamically based on sender -->
+            </div>
+            <button class="btn-back btn-secondary" id="backToTone">⬅️ Back</button>
+            <button class="btn-next" id="nextToEnergy">Continue ➡️</button>
+        </div>
+
+        <!-- STEP 4: Energy Meter -->
+        <div class="form-step" id="step-4">
+            <h2>🔋 Your Social Energy Level</h2>
+            <p class="subtitle">How much effort do you honestly want to put into this?</p>
+            <div class="range-container">
+                <input type="range" id="energy-slider" min="0" max="100" value="50">
+                <p id="energy-level-label" class="energy-level-label">Energy: Medium (50%)</p>
+                <div class="slider-labels">
+                    <span>0% (Exhausted)</span>
+                    <span>100% (Hyperactive)</span>
+                </div>
+                <div class="tone-strength">
+                    <label for="tone-strength-slider">Tone Strength</label>
+                    <input type="range" id="tone-strength-slider" min="0" max="100" value="50">
+                    <p id="tone-strength-label" class="energy-level-label">Tone: Medium (50%)</p>
+                </div>
+                <div class="phrase-style">
+                    <label for="phrase-style-select">Reply phrasing:</label>
+                    <select id="phrase-style-select">
+                        <option value="auto">Auto (recommended)</option>
+                        <option value="casual">Casual</option>
+                        <option value="formal">Formal</option>
+                        <option value="playful">Playful</option>
+                        <option value="direct">Direct</option>
+                    </select>
+                </div>
+            </div>
+            <button class="btn-back btn-secondary" id="backToSubject">⬅️ Back</button>
+            <button class="btn-next" id="submitQuiz">Calculate My Fate 🔮</button>
+        </div>
+
+        <!-- STEP 5: Comedic Loading Screen -->
+        <div class="form-step" id="loading-screen">
+            <div class="spinner"></div>
+            <h2 class="loading-text" id="loadingText">Analyzing text punctuation...</h2>
+        </div>
+
+        <!-- STEP 5: Final Result & Prompt Generator -->
+        <div class="form-step" id="result-screen">
+            <h2 class="result-headline">Your Strategy</h2>
+            <p id="strategy-text" class="result-body">Processing your fate...</p>
+
+            <!-- The AI Prompt Generator Box -->
+            <div class="prompt-container">
+                <h3>🤖 Use this exact prompt with your favorite AI:</h3>
+                <textarea id="ai-prompt-box" readonly>Loading perfectly tailored AI prompt...</textarea>
+                <button id="copy-prompt-btn" class="btn-primary">📋 Copy Prompt</button>
+            </div>
+            <div class="suggested-replies">
+                <h3>💬 Suggested replies</h3>
+                <div class="reply-preview-controls">
+                    <label for="preview-style-select">Preview style:</label>
+                    <select id="preview-style-select">
+                        <option value="auto">Auto</option>
+                        <option value="casual">Casual</option>
+                        <option value="formal">Formal</option>
+                        <option value="playful">Playful</option>
+                        <option value="direct">Direct</option>
+                    </select>
+                </div>
+                <div id="reply-samples" class="reply-samples"></div>
+            </div>
+            <div class="result-actions">
+                <button id="copy-full-btn" class="btn-primary">📤 Copy Reply Package</button>
+                <button id="save-history-btn" class="btn-secondary">💾 Save to History</button>
+            </div>
+            <div class="history-panel">
+                <h3>🕘 Saved history</h3>
+                <div id="history-list" class="history-list">No saved replies yet.</div>
+                <button id="clear-history-btn" class="btn-secondary">Clear History</button>
+            </div>
+            <button class="btn-back btn-secondary" id="backFromResult">⬅️ Back</button>
+            <button onclick="location.reload()" class="btn-secondary">🔄 Start Over</button>
+        </div>
+
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>

@@ -1,0 +1,636 @@
+{
+  "subjectOptionsBySender": {
+    "crush": [
+      { "value": "plans", "label": "Plans / Hangout", "icon": "📅", "description": "Make plans, dates, or meetups." },
+      { "value": "apology", "label": "Apology / Feelings", "icon": "🙏", "description": "Emotional or relationship messages." },
+      { "value": "invitation", "label": "Invitation", "icon": "🎉", "description": "Events, dates, or hangout invites." },
+      { "value": "support", "label": "Support / Feelings", "icon": "💬", "description": "Emotional support or encouragement." },
+      { "value": "update", "label": "Update / News", "icon": "📢", "description": "Casual news or personal updates." }
+    ],
+    "bestie": [
+      { "value": "plans", "label": "Plans / Hangout", "icon": "📅", "description": "Weekend plans, coffee, or last-minute meetups." },
+      { "value": "support", "label": "Support / Feelings", "icon": "💬", "description": "Advice, encouragement, or emotional backup." },
+      { "value": "update", "label": "Update / News", "icon": "📢", "description": "Life updates, gossip, or check-ins." },
+      { "value": "checkin", "label": "Check-in", "icon": "👀", "description": "Casual, 'how are you' or follow-up messages." },
+      { "value": "invitation", "label": "Invitation", "icon": "🎉", "description": "Group plans, hangouts, or fun invites." }
+    ],
+    "friend": [
+      { "value": "plans", "label": "Plans / Hangout", "icon": "📅", "description": "Casual meetups and plan-making." },
+      { "value": "invitation", "label": "Invitation", "icon": "🎉", "description": "Party invites or outing ideas." },
+      { "value": "support", "label": "Support / Feelings", "icon": "💬", "description": "Emotional talk or check-ins." },
+      { "value": "update", "label": "Update / News", "icon": "📢", "description": "What’s new and what’s happening." },
+      { "value": "feedback", "label": "Feedback / Request", "icon": "📝", "description": "Advice, favors, or tips." }
+    ],
+    "lover": [
+      { "value": "plans", "label": "Plans / Date", "icon": "📅", "description": "Date plans, dinner, or romantic time together." },
+      { "value": "apology", "label": "Apology / Hearts", "icon": "🙏", "description": "Emotional or relationship-driven messages." },
+      { "value": "support", "label": "Support / Feelings", "icon": "💬", "description": "Reassurance, affection, or care." },
+      { "value": "invitation", "label": "Invitation", "icon": "🎉", "description": "Special invites or shared experiences." },
+      { "value": "update", "label": "Update / News", "icon": "📢", "description": "Personal updates or check-ins." }
+    ],
+    "boss": [
+      { "value": "work", "label": "Work / Task", "icon": "💼", "description": "Project updates, deadlines, or tasks." },
+      { "value": "feedback", "label": "Feedback / Request", "icon": "📝", "description": "Performance notes or asks." },
+      { "value": "update", "label": "Status / Update", "icon": "📢", "description": "Progress reports and status checks." },
+      { "value": "support", "label": "Help / Support", "icon": "🛠️", "description": "Requests for assistance or clarifications." }
+    ],
+    "family": [
+      { "value": "plans", "label": "Plans / Family Time", "icon": "📅", "description": "Family plans, visits, or shared events." },
+      { "value": "support", "label": "Support / Feelings", "icon": "💬", "description": "Emotional check-ins and support." },
+      { "value": "update", "label": "Update / News", "icon": "📢", "description": "Household news or family updates." },
+      { "value": "feedback", "label": "Feedback / Request", "icon": "📝", "description": "Requests for help or advice." },
+      { "value": "apology", "label": "Apology / Relationship", "icon": "🙏", "description": "Emotional or relational conversations." }
+    ],
+    "ex": [
+      { "value": "apology", "label": "Apology / Closure", "icon": "🙏", "description": "Emotional or respectful responses." },
+      { "value": "update", "label": "Update / News", "icon": "📢", "description": "Short news or followups." },
+      { "value": "support", "label": "Support / Feelings", "icon": "💬", "description": "Boundaries or emotional replies." },
+      { "value": "feedback", "label": "Feedback / Request", "icon": "📝", "description": "Clarifications or requests." }
+    ],
+    "potential-date": [
+      { "value": "plans", "label": "Plans / Date", "icon": "📅", "description": "Date ideas or meetup plans." },
+      { "value": "invitation", "label": "Invitation", "icon": "🎉", "description": "Casual event or hangout invites." },
+      { "value": "support", "label": "Support / Feelings", "icon": "💬", "description": "Emotional or interest-based replies." },
+      { "value": "update", "label": "Update / News", "icon": "📢", "description": "Light personal updates." },
+      { "value": "feedback", "label": "Feedback / Request", "icon": "📝", "description": "Questions or requests for details." }
+    ]
+  },
+  "promptSubjectText": {
+    "plans": "a scheduling or plans message",
+    "apology": "an apology or relationship message",
+    "work": "a work-related message",
+    "checkin": "a casual check-in message",
+    "invitation": "an invitation or hangout message",
+    "support": "a support or feelings message",
+    "update": "an update or news message",
+    "feedback": "a feedback or request message"
+  },
+  "senderDefaults": {
+    "crush": [
+      "I saw your message and I’m keeping this light and friendly.",
+      "Thanks for writing. I’m answering casually and honestly.",
+      "Nice to hear from you. I’m replying with a chill, warm vibe.",
+      "I’m keeping this simple so it feels easy and not too much.",
+      "I’m replying clearly and with a little curiosity." 
+    ],
+    "bestie": [
+      "Hey, I got your message. I’m answering like your go-to friend.",
+      "I’m keeping this real and supportive, nothing extra.",
+      "I’m here for it — casual, honest, and laid-back.",
+      "I’m answering with the kind of energy only a bestie has.",
+      "I’m keeping this easygoing and down-to-earth." 
+    ],
+    "friend": [
+      "Hey, I got your message. I’m replying in a normal, friendly way.",
+      "I’m keeping this relaxed and straightforward.",
+      "I’m answering honestly without making it more than it is.",
+      "I’m here for it — friendly and easygoing.",
+      "I’m replying in a calm, practical style." 
+    ],
+    "lover": [
+      "I saw your message. I’m answering with warmth and care.",
+      "I’m keeping this affectionate but grounded.",
+      "I’m replying in a way that feels close and sincere.",
+      "I’m being honest and gentle in my response.",
+      "I’m keeping this sweet without overdoing it." 
+    ],
+    "boss": [
+      "Thanks for the update. I’m replying clearly and professionally.",
+      "I’m keeping this concise and to the point.",
+      "I’m answering politely, with no extra fluff.",
+      "I’m being direct and focused on the next step.",
+      "I’m replying with respect and a solid work tone." 
+    ],
+    "family": [
+      "Thanks for your message. I’m answering kindly and clearly.",
+      "I’m keeping this respectful and easy to follow.",
+      "I’m replying with warmth, but not too much.",
+      "I’m being honest and calm in my response.",
+      "I’m answering with care and clarity." 
+    ],
+    "ex": [
+      "I got your message. I’m keeping this short and to the point.",
+      "I’m replying politely, with a boundary in mind.",
+      "I’m keeping it respectful and not reopening anything.",
+      "I’m answering calmly and without extra emotion.",
+      "I’m keeping this simple and low-key." 
+    ],
+    "potential-date": [
+      "Hey, I saw your message. I’m replying warm and curious.",
+      "I’m keeping this friendly and open.",
+      "I’m answering with interest, but not overdoing it.",
+      "I’m being positive and easygoing in my response.",
+      "I’m replying in a calm, inviting way." 
+    ]
+  },
+  "subjectTemplates": {
+    "drama": {
+      "crush": [
+        "This feels important, so I’m replying honestly and simply.",
+        "I don’t want to overreact, but I’m taking this seriously.",
+        "I’m answering clearly and not adding extra panic.",
+        "I’m staying calm and responding to the main point.",
+        "I’m hearing the urgency and I’m answering directly." 
+      ],
+      "bestie": [
+        "I hear the drama. I’m answering honestly and with support.",
+        "This sounds intense, so I’m keeping it straightforward.",
+        "I’m here for it and I’m responding with care.",
+        "I’m replying in a way that doesn’t make it worse.",
+        "I’m taking this seriously without overreacting." 
+      ],
+      "friend": [
+        "I get the tone; I’m answering calmly and clearly.",
+        "This seems urgent, so I’m keeping it honest.",
+        "I’m here to help, not to add more drama.",
+        "I’m replying with a steady, clear response.",
+        "I’m hearing you and answering with a calm tone." 
+      ],
+      "lover": [
+        "I’m taking this seriously and answering gently.",
+        "I’m here for you and I’m responding with care.",
+        "This sounds important, so I’m keeping it warm and clear.",
+        "I’m answering in a way that feels safe and honest.",
+        "I’m replying with care, not panic." 
+      ],
+      "boss": [
+        "I hear the urgency and I’m answering with clarity.",
+        "I’m responding professionally and focusing on the issue.",
+        "I’m keeping this direct and solution-minded.",
+        "I’m answering to move things forward without drama.",
+        "I’m acknowledging it and replying with the right tone." 
+      ],
+      "family": [
+        "I’m hearing the concern and replying with calm support.",
+        "I’m staying respectful and straightforward.",
+        "I’m answering with kindness and clarity.",
+        "I’m here to help, so I’m keeping it simple.",
+        "I’m responding in a caring but steady way." 
+      ],
+      "ex": [
+        "I’m replying respectfully and without reopening things.",
+        "I hear the urgency, but I’m keeping this low-key.",
+        "I’m taking it seriously while staying boundary-aware.",
+        "I’m answering politely and not adding extra emotion.",
+        "I’m keeping this straightforward and respectful." 
+      ],
+      "potential-date": [
+        "I’m taking this seriously and answering honestly.",
+        "I want to keep this clear and not too intense.",
+        "I’m replying with thoughtful care and calmness.",
+        "I’m being polite and level-headed in my response.",
+        "I’m staying respectful and not overreacting." 
+      ]
+    },
+    "plans": {
+      "crush": [
+        "That sounds good. I’m free and can work around your schedule.",
+        "I’m down for that. Just tell me when and where.",
+        "I’d love to make that happen—send the details and I’ll be there.",
+        "That works for me. Let’s lock in a time.",
+        "I’m interested, so let me know what you have in mind." 
+      ],
+      "bestie": [
+        "Count me in — this sounds like a fun hangout.",
+        "I’m free and ready to catch up.",
+        "Let’s do it. I’m here for the plan and the fun.",
+        "Sounds good — I’m game for that.",
+        "I’m down. Just let me know the details." 
+      ],
+      "friend": [
+        "That could work. I’m happy to meet up.",
+        "I’m into that plan. Tell me the time and I’ll be there.",
+        "I’m down. It sounds like a good time.",
+        "I can make that happen. Let’s pick a day.",
+        "I’m open to it — just tell me where and when." 
+      ],
+      "lover": [
+        "I’d love that. I’m free and can’t wait to see you.",
+        "That sounds amazing. Let’s make it special.",
+        "I’m in. Tell me when and I’ll be there with full energy.",
+        "I’m excited for that — I’ll be there.",
+        "Sounds perfect. I’m looking forward to it." 
+      ],
+      "boss": [
+        "That plan works for me. I’ll be ready at the scheduled time.",
+        "Thanks for the details. I can make that happen.",
+        "I’m available then and I’ll follow up as needed.",
+        "I’ll prepare accordingly and keep you posted.",
+        "I can do that. I’ll make sure it’s handled." 
+      ],
+      "family": [
+        "That sounds nice. I can make time for it.",
+        "I’m free and happy to join. Just send the details.",
+        "That works for me. I’ll be there.",
+        "I can make that happen. Keep me posted.",
+        "I’m looking forward to it. Let me know what’s next." 
+      ],
+      "ex": [
+        "I’m okay with that if we keep it simple.",
+        "I can do that, as long as it stays clear.",
+        "That works for me if it stays low-key.",
+        "I’m down, but I’d rather keep this easy and straightforward.",
+        "I can make that happen, just let me know the details." 
+      ],
+      "potential-date": [
+        "I’d love that. Sounds like a fun plan.",
+        "That sounds great—let’s lock in the details.",
+        "I’m up for that. Tell me when and where.",
+        "That sounds good. I’m excited to see what you have planned.",
+        "I’m interested. Let’s make this happen." 
+      ]
+    },
+    "apology": {
+      "crush": [
+        "I’m sorry if I made things weird. I care how you feel.",
+        "I hear you and I’m sorry about that.",
+        "I didn’t mean to make it awkward. Thanks for telling me.",
+        "I’m sorry. I want this to feel better, not worse.",
+        "I’m sorry if I overstepped — I appreciate your honesty." 
+      ],
+      "bestie": [
+        "I’m sorry, bestie. I messed up and want to fix it.",
+        "I hear you. I’m sorry and I appreciate you being honest.",
+        "I care about us. Sorry for the way that landed.",
+        "I’m sorry if I hurt you. I want to make it right.",
+        "I’m sorry and I want to be better here." 
+      ],
+      "friend": [
+        "I’m sorry about that. I didn’t mean to come off that way.",
+        "Thanks for being real with me. I’m sorry if I was off.",
+        "I’m sorry. Let’s fix this and move forward.",
+        "I didn’t mean for that to happen. I’m sorry.",
+        "I’m sorry — I appreciate you telling me how you feel." 
+      ],
+      "lover": [
+        "I’m sorry. I care about us and want to make this better.",
+        "I didn’t mean to hurt you. I’m sorry and I’m listening.",
+        "I’m sorry for that. You matter to me and I want to make it right.",
+        "I’m sorry. I want to learn from this and do better.",
+        "I’m sorry. I care about how this feels for you." 
+      ],
+      "family": [
+        "I’m sorry for how that came across. I care about you.",
+        "Thanks for saying that. I’m sorry and I want to do better.",
+        "I’m sorry — I didn’t intend to upset you.",
+        "I’m sorry. I want to make this right.",
+        "I’m sorry if I hurt you. That wasn’t my intention." 
+      ],
+      "ex": [
+        "I’m sorry if that caused any confusion. I appreciate your honesty.",
+        "I didn’t mean to reopen anything. I’m sorry for that.",
+        "I’m sorry for how that landed. I respect your feelings.",
+        "I’m sorry. I’m trying to keep this respectful.",
+        "I’m sorry if that made things harder. I’m not trying to complicate anything." 
+      ],
+      "potential-date": [
+        "I’m sorry if that felt weird. I want to keep this easy.",
+        "I didn’t mean to be confusing. I’m sorry and I want to be clearer.",
+        "I’m sorry — I appreciate you telling me how you feel.",
+        "I’m sorry if that was awkward. I’m here to be honest.",
+        "I’m sorry. I want this to feel better, not more confusing." 
+      ]
+    },
+    "work": {
+      "boss": [
+        "I received the task and I’ll follow up with the next steps.",
+        "Thanks. I’m on it and will update you shortly.",
+        "I’ll take care of that and send a status update soon.",
+        "I’ve got it. I’ll make sure this gets handled.",
+        "I’m on it and I’ll keep you posted." 
+      ],
+      "family": [
+        "I got your message. I’ll take care of it and keep you posted.",
+        "Thanks for the heads-up. I’ll address it and get back to you.",
+        "I’ll handle this and let you know when it’s done.",
+        "I’ll work on that and update you soon.",
+        "I’ll take care of it and keep you in the loop." 
+      ],
+      "friend": [
+        "Got it. I’ll handle that and let you know how it goes.",
+        "Thanks for asking. I’ll take care of it and keep you in the loop.",
+        "I’ll work on that and update you when it’s ready.",
+        "I’ve got it. I’ll follow up once it’s done.",
+        "I’ll take care of that and keep you posted." 
+      ],
+      "bestie": [
+        "Got it. I’ll handle that and check back soon.",
+        "Thanks for sending this. I’ll sort it out and keep you posted.",
+        "I’ll get on it and let you know when it’s done.",
+        "I’ll handle that and tell you when I’m done.",
+        "I’ll take care of it and update you soon." 
+      ],
+      "lover": [
+        "I got your note. I’ll handle it and come back with the update.",
+        "Thanks. I’ll take care of that and let you know when it’s done.",
+        "I’ll sort it out and keep you posted.",
+        "I’ll do that and let you know when it’s finished.",
+        "I’ll handle it and update you once I have news." 
+      ],
+      "crush": [
+        "I’ve got it. I’ll take care of this and follow up soon.",
+        "Thanks for the heads-up. I’ll handle it and let you know.",
+        "I’ll work on that and get back to you with an update.",
+        "I’m on it and I’ll tell you when it’s done.",
+        "I’ll take care of that and update you shortly." 
+      ],
+      "ex": [
+        "I’ll take care of that and keep the response short.",
+        "I’m on it. I’ll update you when there’s something to share.",
+        "I’ll handle it and keep it low-key.",
+        "I’ll do that and keep the reply straightforward.",
+        "I’ll take care of it and let you know when it’s done." 
+      ],
+      "potential-date": [
+        "I got it—thanks for letting me know. I’ll take care of it.",
+        "Thanks. I’ll handle that and get back to you soon.",
+        "I’ll take care of that and follow up with a quick update.",
+        "I’m on it and I’ll let you know what happens.",
+        "I’ll handle it and keep you posted." 
+      ]
+    },
+    "checkin": {
+      "bestie": [
+        "I’ve been good — thanks for checking. What’s new with you?",
+        "Thanks for checking in. I’m here if you want to chat.",
+        "I’m alright. Let’s catch up soon.",
+        "I’m doing okay. How are you doing?",
+        "I’m good. Appreciate you asking." 
+      ],
+      "friend": [
+        "I’m doing okay, thanks for checking. What’s up with you?",
+        "Appreciate the check-in. Things are fine here — how are you?",
+        "I’m good. Thanks for asking. What’s new on your side?",
+        "I’m okay. How’s everything with you?",
+        "I’m alright. Thanks for checking in." 
+      ],
+      "family": [
+        "I’m doing alright, thanks for checking in. Hope you’re well too.",
+        "Appreciate the message. I’m okay and thinking of you.",
+        "I’m fine, thanks. How are things for you?",
+        "I’m doing okay. Thanks for asking.",
+        "I’m alright. Hope you’re doing well too." 
+      ],
+      "lover": [
+        "I’m doing okay. Thanks for checking in — it means a lot.",
+        "I’m feeling good. Your message makes me smile.",
+        "I’m alright. How are you doing? I want to hear about your day.",
+        "I’m doing well. How are you feeling?",
+        "I’m okay. Thanks for checking in." 
+      ],
+      "crush": [
+        "I’m good, thanks. Nice to hear from you — what’s up?",
+        "Doing okay. Appreciate the check-in. How are you?",
+        "I’m alright. Thanks for asking. What about you?",
+        "I’m fine. How are you doing?",
+        "I’m doing okay. Thanks for checking in." 
+      ],
+      "potential-date": [
+        "I’m doing well, thanks. Appreciate the check-in.",
+        "I’m good. How about you? I’d love to hear more.",
+        "Doing well — thanks for checking. What’s new with you?",
+        "I’m okay. How are you?",
+        "I’m doing fine. Thanks for reaching out." 
+      ],
+      "ex": [
+        "I’m doing okay, thanks. Hope you’re doing alright too.",
+        "I’m fine. Thanks for checking in. Let’s keep this simple.",
+        "I’m alright. Appreciate you asking.",
+        "I’m doing okay. Hope you are too.",
+        "I’m fine. Thanks for reaching out." 
+      ]
+    },
+    "invitation": {
+      "crush": [
+        "I’d like that. It sounds fun.",
+        "That sounds nice. I’ll see if I can come.",
+        "I’m interested. Thanks for inviting me.",
+        "I’d love to join if I’m available.",
+        "That sounds good. I’m curious to see what you have planned." 
+      ],
+      "bestie": [
+        "Sounds like fun! I’m in if I’m free.",
+        "I’d love to join—just tell me when.",
+        "That sounds great. I’ll try to be there.",
+        "I’m up for that. Keep me posted.",
+        "Sounds good. I’d love to come." 
+      ],
+      "friend": [
+        "That sounds good. I’ll try to make it work.",
+        "I’d like to come. Let me know the details.",
+        "Sounds fun. I’ll see if I can make it.",
+        "I’m interested. Keep me posted.",
+        "I’d love to join if I’m free." 
+      ],
+      "lover": [
+        "I’d love that. Sounds amazing.",
+        "That would be wonderful. I’m excited.",
+        "I’m in. Let’s make it special.",
+        "I’d be there. That sounds perfect.",
+        "I’m excited about that. Count me in." 
+      ],
+      "family": [
+        "That sounds nice. I’d like to come.",
+        "Thanks for inviting me. I’ll try to be there.",
+        "I appreciate the invite. I’ll make time.",
+        "I’d love to join. Keep me posted.",
+        "That sounds good. I’ll do my best to attend." 
+      ],
+      "boss": [
+        "Thanks for the invite. I’m available and will join if it fits the schedule.",
+        "I appreciate the invite. I’ll be there if it’s alright with the team.",
+        "Thanks. I can join and will make sure it works with my schedule.",
+        "I’m available for that. I’ll coordinate it with the team.",
+        "Thanks for inviting me. I’ll attend if the timing works." 
+      ],
+      "potential-date": [
+        "That sounds great. I’d love to join.",
+        "I’m interested. Let’s make a plan.",
+        "I’d love that. Tell me when and where.",
+        "I’m excited by that idea. Count me in.",
+        "I’d be happy to come. Just send the details." 
+      ],
+      "ex": [
+        "I’m okay with that if it stays casual.",
+        "I can come, as long as it’s comfortable.",
+        "I’ll be there if it feels right.",
+        "I can do that if it’s easy and low-key.",
+        "I’m willing to come if this stays simple." 
+      ]
+    },
+    "support": {
+      "crush": [
+        "I’m here for you. Let me know what you need.",
+        "Thanks for sharing. I care and I want to support you.",
+        "I’m listening. Tell me how I can help.",
+        "I’m here if you want to talk. I want to help.",
+        "I’m here to listen if you need it." 
+      ],
+      "bestie": [
+        "I’m here, no judgment. Tell me what’s going on.",
+        "You can count on me. I’ve got your back.",
+        "I’m listening. Spill it when you’re ready.",
+        "I’m here whenever you want to talk.",
+        "You’re not alone. I’ve got you." 
+      ],
+      "friend": [
+        "I’m here if you need me. What’s going on?",
+        "I care about this. Tell me more and I’ll help however I can.",
+        "I’m here for you. Let’s figure this out together.",
+        "I’m here if you want to talk it through.",
+        "I want to help however I can." 
+      ],
+      "lover": [
+        "I’m here for you. I want to support you through this.",
+        "I care about you. Tell me what you need and I’ll be there.",
+        "I’m listening, and I’m here to help however I can.",
+        "I’m here with you. Tell me what you need.",
+        "I want to help — let me know what would feel best." 
+      ],
+      "family": [
+        "I’m here for you. You can always lean on me.",
+        "Thanks for sharing. I want to help and support you.",
+        "I’m listening. Let’s talk when you’re ready.",
+        "I’m here if you want support. Just say the word.",
+        "I’m here for you — we’ll figure this out." 
+      ],
+      "boss": [
+        "I understand. Let me know what support you need and I’ll help where I can.",
+        "I’m here to assist. Tell me how I can support you with this.",
+        "I’ll help solve this. Let me know what you need from me.",
+        "I’m here to help with whatever you need.",
+        "Let me know what would make this easier and I’ll do it." 
+      ],
+      "ex": [
+        "I’m here to listen. Let me know how you’re feeling.",
+        "I care about what you said. I want to be supportive without crossing boundaries.",
+        "I’m here if you want to talk this through.",
+        "I can listen if you want to share more.",
+        "I want to help, as long as it stays respectful." 
+      ],
+      "potential-date": [
+        "I’m here for you. Tell me what’s on your mind.",
+        "I want to support you. Let me know how I can help.",
+        "I’m listening. You can lean on me if you need to.",
+        "I’m here if you want someone to listen.",
+        "I’m here to help if you need it." 
+      ]
+    },
+    "update": {
+      "crush": [
+        "Thanks for the update. I’m glad to hear from you.",
+        "I appreciate the news. I’m here and I’m listening.",
+        "Nice update. I’m replying with a relaxed and positive vibe.",
+        "Thanks for sharing. That sounds good.",
+        "Appreciate the update. I’m glad you sent it." 
+      ],
+      "bestie": [
+        "Sweet, thanks for the update. That sounds good.",
+        "Nice — glad you shared that.",
+        "Good to know. I’m here if you want to chat more.",
+        "Thanks for the update. I’m happy to hear it.",
+        "Appreciate the news. Keep me posted." 
+      ],
+      "friend": [
+        "Thanks for letting me know. That sounds good.",
+        "I appreciate the update. I’m here if you want to chat more.",
+        "Nice to hear that. I’m glad you sent it.",
+        "Thanks for the update. I’ve got it.",
+        "Appreciate the news. I’m here if you want to talk." 
+      ],
+      "lover": [
+        "Thanks for sharing. I’m happy to hear that from you.",
+        "That sounds great. I’m glad you told me.",
+        "I appreciate the update. It means a lot.",
+        "Thanks for the news. I’m here for it.",
+        "I’m glad you shared that with me." 
+      ],
+      "family": [
+        "Thanks for the update. I’m glad to know what’s going on.",
+        "I appreciate the news. Keep me posted if anything changes.",
+        "Nice update. I’m here if you want to talk more.",
+        "Thanks for sharing. I’m glad to hear that.",
+        "I appreciate the update. Let me know what changes." 
+      ],
+      "boss": [
+        "Thanks for the update. I’ve noted it and will act accordingly.",
+        "I appreciate the information. I’ll keep moving forward with it.",
+        "Thanks. I’ve got the update and I’ll respond as needed.",
+        "I’ve received the update and I’m on it.",
+        "Thank you for the note. I’ll proceed from here." 
+      ],
+      "potential-date": [
+        "Thanks for the update. I’m glad you shared that.",
+        "I appreciate the news. It’s good to know.",
+        "Nice update. I’m here if you want to talk more about it.",
+        "Thanks for telling me. I appreciate the heads-up.",
+        "I’m glad you shared that. Thanks." 
+      ],
+      "ex": [
+        "Thanks for the update. I appreciate the clear communication.",
+        "I got it. Thanks for letting me know.",
+        "Thanks for the update. I hear you.",
+        "I’ve got the news. Thanks for telling me.",
+        "Thanks. I appreciate the update." 
+      ]
+    },
+    "feedback": {
+      "boss": [
+        "Thanks for the feedback. I appreciate it and I’ll improve.",
+        "I hear you. I’ll take that on board and make the adjustment.",
+        "Thanks for letting me know. I’ll do better next time.",
+        "I appreciate the input. I’ll act on that.",
+        "Thanks. I’ll make that change and follow up." 
+      ],
+      "friend": [
+        "Thanks for being honest. I appreciate the feedback.",
+        "I hear you. I’ll keep that in mind moving forward.",
+        "Thanks — I appreciate the note and I’ll adjust.",
+        "I appreciate you telling me. I’ll work on that.",
+        "Thanks. I’ll take that seriously." 
+      ],
+      "bestie": [
+        "Thanks for the real talk. I’ll take it seriously.",
+        "I appreciate the feedback. I’m listening and I’ll improve.",
+        "Thanks for being upfront. I’ll make that change.",
+        "I appreciate you telling me. I’ll do better.",
+        "Thanks. I’ll keep that in mind." 
+      ],
+      "lover": [
+        "Thanks for sharing that. I care about your perspective.",
+        "I hear you. I’ll do my best to make this better.",
+        "Thanks — I want to learn from that and improve.",
+        "I appreciate that. I’ll take it to heart.",
+        "Thanks. I’ll work on that." 
+      ],
+      "family": [
+        "Thanks for the feedback. I appreciate the honesty.",
+        "I hear you. I’ll take that to heart.",
+        "Thanks — I’ll work on that.",
+        "I appreciate that. I’ll make an effort to improve.",
+        "Thanks. I’ll pay attention to that." 
+      ],
+      "crush": [
+        "Thanks for telling me. I appreciate the honest note.",
+        "I hear you. I’ll keep that in mind going forward.",
+        "Thanks for sharing that. I’ll adjust accordingly.",
+        "I appreciate the honesty. I’ll work on it.",
+        "Thanks. I’ll keep this in mind." 
+      ],
+      "potential-date": [
+        "Thanks for letting me know. I’ll keep that in mind.",
+        "I appreciate the honesty. I’ll make that adjustment.",
+        "Thanks — I want to get this right.",
+        "I appreciate your feedback. I’ll take it seriously.",
+        "Thanks. I’ll use that to improve." 
+      ],
+      "ex": [
+        "Thanks for the feedback. I’ll respect that moving forward.",
+        "I hear you. I’ll take that under advisement.",
+        "Thanks for sharing your perspective.",
+        "I appreciate that. I’ll keep it in mind.",
+        "Thanks. I’ll respect that going forward." 
+      ]
+    }
+  }
+}
